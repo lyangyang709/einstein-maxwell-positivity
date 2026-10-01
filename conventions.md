@@ -1,48 +1,47 @@
 # Conventions ledger
 
-This file begins with the first target source:
+Pinned source: Cheung, Liu and Remmen, arXiv:1801.08546v3.
 
-- Cheung, Liu and Remmen, arXiv:1801.08546v3.
-
-No entry should be marked `verified` without an exact page or equation
-reference from that version.
-
-## Source metadata
-
-| Field | Value | Status | Evidence |
-| --- | --- | --- | --- |
-| arXiv version | `1801.08546v3` | quoted | arXiv identifier selected by the project |
-| Paper title | _To verify from the pinned source_ | unresolved | — |
-| Source date | _To verify from the pinned source_ | unresolved | — |
+`source-checked` means a collaborator supplied an exact page or equation from
+the pinned version. It does not mean the project has independently rederived
+the statement.
 
 ## Geometric and action conventions
 
-| Item | Source convention | Unified convention | Conversion | Status | Page/equation |
-| --- | --- | --- | --- | --- | --- |
-| Metric signature |  |  |  | unresolved |  |
-| Riemann tensor |  |  |  | unresolved |  |
-| Ricci tensor/scalar |  |  |  | unresolved |  |
-| Einstein–Hilbert normalization |  |  |  | unresolved |  |
-| Maxwell normalization |  |  |  | unresolved |  |
-| Levi-Civita tensor |  |  |  | unresolved |  |
-| Newton/Planck mass convention |  |  |  | unresolved |  |
+| Item | Source convention | Status | Evidence |
+| --- | --- | --- | --- |
+| Metric signature | `(-,+,+,+)` | source-checked | p. 3, footnote 1; P1013-0003 |
+| Riemann tensor | `R^mu_{nu rho sigma} = d_rho Gamma^mu_{nu sigma} - d_sigma Gamma^mu_{nu rho} + Gamma^mu_{rho alpha} Gamma^alpha_{nu sigma} - Gamma^mu_{sigma alpha} Gamma^alpha_{nu rho}` | source-checked | p. 3, footnote 1; P1013-0003 |
+| Ricci tensor | `R_{mu nu}=R^rho_{mu rho nu}` | source-checked | p. 3, footnote 1; P1013-0003 |
+| Gravitational coupling | `kappa^2=8 pi G` | source-checked | p. 3, footnote 1; P1013-0003 |
+| Two-derivative Lagrangian | `L~=R/(2 kappa^2)-F_{mu nu}F^{mu nu}/4` | source-checked | p. 3, eq. (3); P1013-0003 |
 
-## Physical quantities
+## Coefficients and physical quantities
 
-| Quantity | Source definition | Unified definition | Status | Page/equation |
-| --- | --- | --- | --- | --- |
-| ADM mass |  |  | unresolved |  |
-| Electric charge |  |  | unresolved |  |
-| Horizon radius |  |  | unresolved |  |
-| Extremality condition |  |  | unresolved |  |
-| Charge-to-mass ratio |  |  | unresolved |  |
+| Quantity | Source definition | Status | Evidence |
+| --- | --- | --- | --- |
+| Four-dimensional coefficient dimensions | `[c1,c2,c3]=0`, `[c4,c5,c6]=-2`, `[c7,c8]=-4` | source-checked | p. 3, eq. (4), and p. 15, footnote 7; P1013-0003 |
+| Rescaled coefficients | `d1,2,3=kappa^2 c1,2,3`; `d4,5,6=c4,5,6`; `d7,8=kappa^-2 c7,8` | source-checked | p. 13, eq. (27); P1013-0004 |
+| Dimension of every `d_i` | `-2` | source-checked | p. 13, eq. (27); P1013-0004 |
+| Rescaled mass | `m=kappa^2 M/(8 pi)` | source-checked | p. 15, eqs. (34)-(35); P1013-0003 |
+| Rescaled charge | `q=kappa Q/(4 sqrt(2) pi)` | source-checked | p. 15, eqs. (34)-(35); P1013-0003 |
+| Non-extremality parameter | `xi=sqrt(1-q^2/m^2)` | source-checked | p. 15, eqs. (34)-(35); P1013-0003 |
+| Zeroth-order metric functions | `f~=g~=1-2m/r+q^2/r^2` | source-checked | p. 16, eqs. (37), (39); P1013-0003 |
+| Outer horizon | `r_+=m+sqrt(m^2-q^2)` | source-checked | p. 16, eqs. (37), (39); P1013-0003 |
 
-## Required checks
+## Reproducible checks
 
-- [ ] Setting all higher-derivative coefficients to zero reproduces the chosen
-      two-derivative Reissner–Nordström normalization.
-- [ ] Dimensions agree for every operator and coefficient.
-- [ ] Every field redefinition lists all shifted coefficients.
-- [ ] Equivalent operator bases give the same physical extremality correction.
-- [ ] Quoted results are separated from independently reproduced results.
+- Multiplying the zeroth-order horizon equation by `r^2` gives
+  `r^2-2mr+q^2=0`. A double root therefore requires `m^2=q^2`; on the
+  `m>0, q>=0` branch, `q/m=1` and `xi=0`.
+- From the definitions above, `q/m=sqrt(2) Q/(kappa M)`.
+- These are algebraic consistency checks, not a higher-derivative extremality
+  result or a proof of the Weak Gravity Conjecture.
 
+## Open checks
+
+- [ ] Derive the eight-operator parity and reduction table.
+- [ ] Independently derive every coefficient shift under the allowed field redefinitions.
+- [ ] Verify complete invariant combinations, including all redefinition parameters.
+- [ ] Confirm that equivalent bases give the same physical extremality correction.
+- [ ] Separate quoted/source-checked results from independently reproduced results.

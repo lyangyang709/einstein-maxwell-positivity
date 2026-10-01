@@ -1,3 +1,10 @@
 source_version,source_equation,source_operator,source_coefficient,mass_dimension,parity,reduction_method,field_redefinition,shifted_coefficients,invariant_combination,unified_operator,status,notes
-1801.08546v3,,,,,,,,,,,unresolved,"Template row; populate only from the pinned source"
+1801.08546v3,"eq. (27)",,d1,-2,,,,,,,source-checked,"d1=kappa^2 c1; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d2,-2,,,,,,,source-checked,"d2=kappa^2 c2; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d3,-2,,,,,,,source-checked,"d3=kappa^2 c3; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d4,-2,,,,,,,source-checked,"d4=c4; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d5,-2,,,,,,,source-checked,"d5=c5; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d6,-2,,,,,,,source-checked,"d6=c6; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d7,-2,,,,,,,source-checked,"d7=kappa^-2 c7; source located in P1013-0004"
+1801.08546v3,"eq. (27)",,d8,-2,,,,,,,source-checked,"d8=kappa^-2 c8; source located in P1013-0004"
 
